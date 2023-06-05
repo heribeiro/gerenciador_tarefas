@@ -77,7 +77,15 @@
   
   
   .task-button {
-    background-color: #337ab7;
+    background-color: #1263ab;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+
+  .voltar {
+    background-color: #2b0bac;
     color: #fff;
     border: none;
     padding: 5px 10px;

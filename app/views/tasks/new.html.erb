@@ -13,21 +13,22 @@
   <% end %>
 
   <div class="task-item">
-    <%= form.label :title, class: "task-title" %>
+    <%= form.label :Título, class: "task-title" %>
     <%= form.text_field :title, class: "task-input" %>
   </div>
 
   <div class="task-item">
-    <%= form.label :description, class: "task-title" %>
+    <%= form.label :Descrição, class: "task-title" %>
     <%= form.text_area :description, class: "task-input" %>
   </div>
 
   <div class="task-item">
-    <%= form.label :datetime, "Data e Horário", class: "task-title" %>
+    <%= form.label "Data e horário", "Data e Horário", class: "task-title" %>
     <%= form.datetime_field :datetime, class: "task-input" %>
   </div>
 
   <div class="task-item">
     <%= form.submit "Salvar", class: "task-button" %>
+    <%= form.button "Voltar", class: "voltar", onclick: "window.location.href='#{tasks_path}'" %>
   </div>
 <% end %>

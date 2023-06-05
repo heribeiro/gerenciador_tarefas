@@ -12,19 +12,19 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :Título %>
-    <%= form.text_field :title %>
+  <div class="task-item">
+  <%= form.label :Título, class: "task-title" %>
+  <%= form.text_field :title, class: "task-input" %>
   </div>
 
-  <div class="field">
-    <%= form.label :Descrição %>
-    <%= form.text_area :description %>
+  <div class="task-item">
+  <%= form.label :Descrição, class: "task-title" %>
+  <%= form.text_area :description, class: "task-input" %>
   </div>
 
-  <div class="field">
-    <%= form.label "Data e Horário" %>
-    <%= form.datetime_field :datetime, class: "form-control" %>
+  <div class="task-item">
+  <%= form.label "Data e horário", "Data e Horário", class: "task-title" %>
+  <%= form.datetime_field :datetime, class: "task-input" %>
   </div>
 
   <div class="actions">

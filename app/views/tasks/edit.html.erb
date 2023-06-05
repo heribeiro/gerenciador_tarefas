@@ -1,0 +1,33 @@
+<h1>Editar Tarefa</h1>
+
+<%= form_with(model: @task, url: task_path(@task), method: :patch, local: true) do |form| %>
+  <% if @task.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@task.errors.count, "erro") %> impediram que a tarefa fosse salva:</h2>
+      <ul>
+        <% @task.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>   
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Título %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Descrição %>
+    <%= form.text_area :description %>
+  </div>
+
+  <div class="field">
+    <%= form.label "Data e Horário" %>
+    <%= form.datetime_field :datetime, class: "form-control" %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit "Atualizar" %>
+  </div>
+<% end %>

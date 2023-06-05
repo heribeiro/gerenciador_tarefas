@@ -1,0 +1,33 @@
+<h1 class="title">Nova Tarefa</h1>
+
+<%= form_with(model: @task, url: tasks_path, local: true, html: { class: "task-form" }) do |form| %>
+  <% if @task.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@task.errors.count, "erro") %> impediram que a tarefa fosse salva:</h2>
+      <ul>
+        <% @task.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="task-item">
+    <%= form.label :title, class: "task-title" %>
+    <%= form.text_field :title, class: "task-input" %>
+  </div>
+
+  <div class="task-item">
+    <%= form.label :description, class: "task-title" %>
+    <%= form.text_area :description, class: "task-input" %>
+  </div>
+
+  <div class="task-item">
+    <%= form.label :datetime, "Data e Horário", class: "task-title" %>
+    <%= form.datetime_field :datetime, class: "task-input" %>
+  </div>
+
+  <div class="task-item">
+    <%= form.submit "Salvar", class: "task-button" %>
+  </div>
+<% end %>

@@ -1,0 +1,32 @@
+<h1 class="title">Minhas Tarefas</h1>
+
+<% if @tasks.empty? %>
+  <p>Não há tarefas cadastradas.</p>
+<% else %>
+  <ul class="task-list">
+    <% @tasks.each do |task| %>
+      <li class="task-item">
+        <strong>Título: <%= task.title %></strong>
+        <p>Descrição: <%= task.description %></p>
+        <p>Data e Horário: <%= task.datetime.strftime('%d/%m/%Y %H:%M') %></p>
+        <% if params[:action] == 'index' %>
+          <%= form_with model: task, local: true do |form| %>
+            <div class="task-completed">
+              <%= form.label :Completa, class: 'checkbox-label' %>
+              <%= form.check_box :completed %>
+            </div>
+            <%= form.submit 'Atualizar Status', class: 'update-button' %>
+          <% end %>
+        <% else %>
+          <p><%= task.completed ? 'Concluída' : 'Pendente' %></p>
+        <% end %>
+        <%= button_to 'Editar', edit_task_path(task), method: :get, class: 'edit-button' %>
+        <%= button_to "Excluir", task_path(task), method: :delete, class: 'delete-button', data: { confirm: 'Tem certeza que deseja excluir esta tarefa?' } %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<p class="new-task-button">
+  <%= button_to "Criar nova tarefa", new_task_path, method: :get, class: 'btn btn-primary' %>
+</p>

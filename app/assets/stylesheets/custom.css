@@ -1,0 +1,87 @@
+.title {
+    color: #333;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .task-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .task-item {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #f5f5f5;
+  }
+  
+  .task-completed {
+    margin-bottom: 5px;
+  }
+  
+  .checkbox-label {
+    font-weight: bold;
+  }
+  
+  .update-button {
+    background-color: #337ab7;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  .edit-button {
+    background-color: #5cb85c;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  .delete-button {
+    background-color: #d9534f;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  .new-task-button {
+    margin-top: 10px;
+  }
+
+  .title {
+    color: #333;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .task-form {
+    margin-bottom: 20px;
+  }
+  
+  .task-item {
+    margin-bottom: 10px;
+  }
+  
+  .task-title {
+    font-weight: bold;
+  }
+  
+  .task-input {
+    width: 300px; /* Defina a largura desejada para os campos */
+    padding: 5px;
+  }
+  
+  
+  .task-button {
+    background-color: #337ab7;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  
